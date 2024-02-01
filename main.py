@@ -7,6 +7,7 @@ from datetime import datetime
 from collections import Counter
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
+from fastapi.responses import JSONResponse
 import json
 
 ####################################################################################################################
@@ -292,14 +293,9 @@ app = FastAPI()
 
 
 
-@app.get("/", response_class=HTMLResponse)
-
+@app.get("/")
 def index_html():
-    
-    with open("templates/index.html", "r", encoding="utf-8") as file:
-        html_content = file.read()
-
-    return HTMLResponse(content=html_content)
+    return JSONResponse(content={"message": "¡Bienvenido a la API!"})
 
 @app.get('/PlayTimeGenre/{genero}')
 def PlayTimeGenre(genero:str):
