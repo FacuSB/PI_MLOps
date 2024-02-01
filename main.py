@@ -11,10 +11,10 @@ import json
 
 ####################################################################################################################
 #Dataframe Original
-df_original = pd.read_parquet('final.parquet.gzip')
+df_original = pd.read_parquet('Data/final.parquet.gzip')
 
 #Dataframe Steam_Games
-df_steam_games=pd.read_json('data/steam_games.json',lines=True)
+df_steam_games=pd.read_json('Data/steam_games.json',lines=True)
 df_steam_games=df_steam_games.drop(columns=['Unnamed: 0'])
 
 #Dataframe Review
