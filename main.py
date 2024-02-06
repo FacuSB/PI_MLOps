@@ -65,7 +65,6 @@ def Developer_Funct(developer: str):
 
     return result
 
-
 ################################################ FUNCION 2 ################################################
 
 def UserData_Funct(User_id: str):
@@ -107,7 +106,7 @@ def UserData_Funct(User_id: str):
     num_items = len(user_items)
     num_recommended_items = sum(recommendations)
 
-    # Crear el resultado
+    # Crear resultado
     result = {
         "Usuario": User_id,
         "Dinero gastado": float(f"{money_spent}"),
@@ -117,7 +116,6 @@ def UserData_Funct(User_id: str):
     }
 
     return result
-
 
 ################################################ FUNCION 3 ################################################
 def UserForGenre_Funct(genre: str):
@@ -134,7 +132,7 @@ def UserForGenre_Funct(genre: str):
     # Obtener la lista de la acumulación de horas jugadas por año
     playtime_by_year = df_genre['Años y Horas'].iloc[0]
 
-    # Devolver un diccionario con el usuario con más horas jugadas y la lista de la acumulación de horas jugadas por año
+    # Crear resultado
     return {"Usuario con más horas jugadas para " + genre: user, "Horas jugadas": playtime_by_year}
 
 ################################################ FUNCION 4 ################################################
@@ -173,7 +171,7 @@ def BestDeveloperYear_Funct(año: int):
     # Ordenar los desarrolladores por cantidad de reseñas y tomar los primeros 3
     top_3_developers = sorted(developer_counts.items(), key=lambda x: x[1], reverse=True)[:3]
 
-    # Crear la lista de resultados
+    # Crear resultado
     result = [{"Puesto {}".format(i+1): developer[0]} for i, developer in enumerate(top_3_developers)]
 
     return result
@@ -202,19 +200,14 @@ def DeveloperReviewsAnalysis_Funct(desarrolladora: str):
                         sentiment = "Neutral"
                     developer_counts[sentiment] += 1
 
-    # Crear el diccionario de resultados
+    # Crear resultado
     result = {desarrolladora: [f"Negative = {developer_counts['Negative']}", f"Neutral = {developer_counts['Neutral']}", f"Positive = {developer_counts['Positive']}"]}
 
     return result
 
-
 ################################################ FUNCION 6 ################################################
 def Items_Recommend_Funct( id_producto: int):
-    """
-    ---6---
-    Ingresando el id de producto, 
-    deberíamos recibir una lista con 5 juegos recomendados similares al ingresado.
-    """
+    
     df=df_steam_games
     def obtener_datos_producto(df, id_producto):
         # Esta función debería devolver los datos del producto con el id dado
@@ -256,14 +249,9 @@ def Items_Recommend_Funct( id_producto: int):
     # Devuelve los productos similares en formato de diccionario con id y nombre del producto
     return {id: nombre for id, nombre in zip(df.iloc[productos_similares]['id'], df.iloc[productos_similares]['app_name'])}
 
-
 ################################################ FUNCION 7 ################################################
 def Users_Recommend_Funct( id_usuario: str):
-    """
-    ---7---
-    Ingresando el id de un usuario,
-    deberíamos recibir una lista con 5 juegos recomendados para dicho usuario.
-    """
+
     df_user = df_user_info
     df_item = df_steam_games
 
