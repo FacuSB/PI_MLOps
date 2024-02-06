@@ -1,6 +1,6 @@
 /venv
 Data/Datos-Json/australian_users_items.json
-Data/Datos-Csv
-Data/Datos-Normalizados
+Data/Datos-Csv/australian_user_items.csv
+Data/Datos-Normalizados/australian_users_items_normalizado.csv
 /key-server.pem
 /prueba_de_las_funciones.ipynb
