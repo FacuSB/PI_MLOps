@@ -99,16 +99,16 @@ El proceso de desarrollo se divide en cinco partes esenciales:
 
     En la fase de despliegue, se utilizo el servicio en la nube utilizando Amazon Web Services (AWS). El proceso se llevó a cabo de la siguiente manera:
 
-    1. **Creación de Instancia EC2 en AWS:**
+    **1. Creación de Instancia EC2 en AWS:**
     Se provisionó una instancia EC2 en la plataforma de AWS para alojar la aplicación. Esta instancia proporciona un entorno escalable y flexible para ejecutar la API.
 
-    2. **Configuración del Entorno en el Servidor Remoto:**
+     **2. Configuración del Entorno en el Servidor Remoto:**
     Se realizó una conexión SSH con el servidor remoto de Ubuntu proporcionado por Amazon. Durante esta configuración, se instaló Python y la herramienta de entornos virtuales de Python para garantizar un entorno de ejecución adecuado.
 
-    3. **Clonación del Repositorio en Rama de Deploy:**
+    **3. Clonación del Repositorio en Rama de Deploy:**
     Para optimizar el despliegue, se realizó una clonación del repositorio, seleccionando específicamente la rama de deploy. Esta rama contenía únicamente los elementos esenciales para el funcionamiento de la API, reduciendo así el exceso de elementos no necesarios en el entorno de producción.
 
-    4. **Ejecución del Servidor con PM2:**
+    **4. Ejecución del Servidor con PM2:**
     Se utilizó PM2, una herramienta avanzada de gestión de procesos para Node.js, para ejecutar el servidor de la API. PM2 proporciona funciones como la gestión de procesos, la monitorización y la recuperación automática, asegurando un servicio continuo y sin interrupciones.
 
 
