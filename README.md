@@ -148,7 +148,7 @@ Puedes utilizar las funciones de la API de la siguiente manera:
 
 - **Recomendación de Juegos por ID de Producto:**
   - Endpoint: `/Item_ItemRecommend/{ID_producto}`
-  - Ejemplo: `/recomendacion_juego/10`
+  - Ejemplo: `/Item_ItemRecommend/10`
 
 - **Recomendación de Juegos para un Usuario por ID:**
   - Endpoint: `/User_ItemRecommend/{ID_usuario}`
