@@ -116,11 +116,11 @@ El proceso de desarrollo se divide en cinco partes esenciales:
 
 Para acceder a la API, utiliza el siguiente enlace:
 
-[Link de la API](http://18.221.69.98:8000/)
+[Link de la API](http://18.119.166.96:8000/)
 
 Además, para probar la API y explorar la documentación, puedes acceder a la interfaz de documentación con el siguiente enlace:
 
-[Documentación de la API](http://18.221.69.98:8000/docs)
+[Documentación de la API](http://18.119.166.96:8000/docs)
 
 ## **Documentación**
 
